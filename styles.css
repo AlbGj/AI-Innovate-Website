@@ -71,12 +71,12 @@ main {
 }
 
 .intro-image {
-    width: 40%; /* Adjust based on your preference */
+    width: 30%; /* Adjusted to make the image smaller */
     height: auto;
 }
 
 .intro-text {
-    width: 55%; /* Adjust based on your preference */
+    width: 65%; /* Adjusted to compensate for smaller image */
 }
 
 h2, h3 {
@@ -108,11 +108,12 @@ footer {
     }
 
     nav ul li {
-        display: block;
-        margin: 0; /* Center elements and remove margins in mobile view */
+        display: block; /* Stack the navigation links vertically on smaller screens */
     }
 
     .logo,
     .intro-image,
     .intro-text {
-        width: 100%; /* Adjust
+        width: 100%; /* Full width on small screens */
+    }
+}
