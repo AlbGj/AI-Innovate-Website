@@ -26,7 +26,7 @@ header {
 }
 
 .logo, .home-image {
-    width: auto;
+    width: 400px;
     height: 250px; /* Adjusted size for visibility */
     margin-right: 30px;
 }
