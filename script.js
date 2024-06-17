@@ -1,3 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    alert('Welcome to AI Innovate!');
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     alert('Welcome to AI Innovate!');
+// });
