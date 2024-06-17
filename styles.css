@@ -27,7 +27,7 @@ header {
 
 .logo, .home-image {
     width: auto;
-    height: 120px; /* Adjusted size for visibility */
+    height: 60px; /* Adjusted size for visibility */
     margin-right: 20px;
 }
 
@@ -86,7 +86,7 @@ footer {
     }
 
     .logo, .home-image {
-        margin-bottom: 60px;
+        margin-bottom: 120px;
         width: 100%; /* Adjusts image to full width on smaller screens */
     }
 
