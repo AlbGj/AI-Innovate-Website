@@ -40,7 +40,7 @@ header {
     width: 100%; /* Adjusts the image to take full container width */
     height: auto; /* Maintains aspect ratio */
     margin: 20px 0; /* Adds top and bottom margin for spacing */
-}/*
+}*/
 
 nav ul {
     list-style-type: none;
