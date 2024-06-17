@@ -20,15 +20,20 @@ header {
     text-align: center;
 }
 
-.header-content {
+.header-content, .content-container, .service {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.logo {
-    height: 60px; /* Adjust height accordingly */
+.logo, .home-image, .service-image {
     width: auto; /* Maintain aspect ratio */
+    height: 80px; /* Adjust height accordingly */
+    margin-right: 20px;
+}
+
+.home-image {
+    height: 120px; /* Increased size of the home image */
 }
 
 nav ul {
@@ -52,26 +57,19 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-/* Main content and Service sections */
 .content-container, .service {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Ensures spacing between text and image */
-    margin-top: 20px;
     background-color: #ffffff;
     padding: 20px;
+    margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px; /* Optional rounded corners */
 }
 
-.home-image, .service-image {
-    flex-shrink: 0; /* Prevents the image from shrinking smaller than its content */
-    width: 150px; /* Adjust width as needed */
-    height: auto; /* Keeps the image aspect ratio */
-    margin-right: 20px;
+.service {
+    align-items: flex-start; /* Align items at the start of the flex container */
 }
 
-.text-content {
+.text-content, .service div {
     flex: 1; /* Allows text content to fill the remaining space */
 }
 
@@ -83,7 +81,11 @@ ul {
     padding-left: 20px; /* Indentation for list */
 }
 
-/* Footer Styles */
+p {
+    color: #333; /* Text color for descriptions */
+    margin-top: 5px; /* Spacing above paragraphs for better readability */
+}
+
 footer {
     text-align: center;
     padding: 20px 0;
@@ -91,17 +93,16 @@ footer {
     color: #ffffff;
 }
 
-/* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .header-content, .content-container, .service {
         flex-direction: column; /* Stack elements vertically */
         text-align: center;
     }
 
-    .home-image, .service-image {
-        width: 100%; /* Full width of the container */
-        margin-right: 0;
-        margin-bottom: 20px; /* Adds spacing between the image and text */
+    .logo, .home-image, .service-image {
+        margin-right: 0; /* Adjust margin for mobile view */
+        margin-bottom: 10px; /* Adds spacing below images on mobile */
+        width: 100%; /* Full width for better mobile responsiveness */
     }
 
     nav ul {
