@@ -64,19 +64,16 @@ main {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.intro-container {
+.service {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.intro-image {
-    width: 30%; /* Adjusted to make the image smaller */
-    height: auto;
-}
-
-.intro-text {
-    width: 65%; /* Adjusted to compensate for smaller image */
+.service-image {
+    width: 100px;  /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px;
 }
 
 h2, h3 {
@@ -91,29 +88,3 @@ ul {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    clear: both;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .header-content,
-    nav ul,
-    .intro-container {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        display: block; /* Stack the navigation links vertically on smaller screens */
-    }
-
-    .logo,
-    .intro-image,
-    .intro-text {
-        width: 100%; /* Full width on small screens */
-    }
-}
