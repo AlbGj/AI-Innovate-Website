@@ -119,3 +119,52 @@ footer {
         padding: 10px 0;
     }
 }
+/* Join Us Page Styles */
+.job-section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.job-button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #005a87;
+    color: #ffffff;
+    border: none;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #cccccc; /* subtle separator */
+}
+
+.job-button:hover, .job-button:focus {
+    background-color: #003f5c;
+}
+
+.job-description {
+    display: none; /* Hide details initially */
+    padding: 10px;
+    background-color: #f9f9f9;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.job-description p {
+    margin-bottom: 10px; /* Space between paragraphs */
+}
+
+.job-description strong {
+    color: #005a87; /* Consistent with other headings */
+}
+
+/* Media query adjustments for job buttons and descriptions */
+@media (max-width: 768px) {
+    .job-button {
+        font-size: 14px; /* Smaller font size on smaller screens */
+    }
+}
+
