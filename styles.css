@@ -24,8 +24,8 @@ header {
     justify-content: space-between;
 }
 
-.logo, .intro-image {
-    height: 60px; /* Adjust as needed */
+.logo {
+    height: 60px;
     margin-right: 20px;
 }
 
@@ -50,15 +50,20 @@ nav ul li a.active {
     text-decoration: underline;
 }
 
-main {
-    background-color: #ffffff;
-    padding: 20px;
+.content-container {
+    display: flex;
+    align-items: center;  /* Align vertically */
+    justify-content: space-between;  /* Distribute space between image and text */
     margin-top: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.image-container {
-    text-align: center; /* Centers the image */
+.home-image {
+    width: 50%;  /* Adjust size as needed */
+    height: auto;
+}
+
+.text-content {
+    width: 45%;  /* Adjust size as needed */
 }
 
 h2, h3 {
