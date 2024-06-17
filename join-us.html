@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - AI Innovate</title>
+    <title>Join Us - AI Innovate</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>About Us</h1>
+        <h1>Join Our Team</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,16 +18,39 @@
         </nav>
     </header>
     <main>
-        <section id="about">
-            <h2>Transforming Business with AI</h2>
-            <p>AI Innovate is dedicated to revolutionizing business processes through the integration of innovative AI solutions. Located in Vancouver, we leverage the city's vibrant technology ecosystem to address the evolving needs of SMEs and enterprises alike.</p>
-            <p>At AI Innovate, our mission is to harness AI to drive efficiency, enhance customer experiences, and promote sustainable business practices. We specialize in AI-driven analytics, financial forecasting tools, AI-enhanced HR systems, and operational optimizations.</p>
-            <p>Founded on principles of innovation and excellence, our consultancy is committed to delivering tailored solutions that help businesses thrive in a digital-first world. Whether you're looking to streamline operations, predict market trends, or optimize your workforce, AI Innovate is your strategic partner in transformation.</p>
+        <section class="job">
+            <button onclick="toggleDetails('ai-developer')">AI Developer - Click to Read More</button>
+            <div id="ai-developer" class="description" style="display: none;">
+                <p>Develop AI solutions involving machine learning algorithms and neural networks. Participate in all phases from design to implementation. Stay updated on AI trends.</p>
+                <p><strong>Salary:</strong> $120,000 - $150,000</p>
+                <a href="mailto:jobs@aiinnovate.com?subject=Application for AI Developer">Apply Now</a>
+            </div>
+        </section>
+        <section class="job">
+            <button onclick="toggleDetails('data-scientist')">Data Scientist - Click to Read More</button>
+            <div id="data-scientist" class="description" style="display: none;">
+                <p>Analyze large datasets, develop predictive models to support strategic decisions, and work closely with cross-functional teams.</p>
+                <p><strong>Salary:</strong> $110,000 - $135,000</p>
+                <a href="mailto:jobs@aiinnovate.com?subject=Application for Data Scientist">Apply Now</a>
+            </div>
+        </section>
+        <section class="job">
+            <button onclick="toggleDetails('operations-manager')">Operations Manager - Click to Read More</button>
+            <div id="operations-manager" class="description" style="display: none;">
+                <p>Oversee day-to-day operations, ensure integration of AI technologies, and maintain efficiency across departments.</p>
+                <p><strong>Salary:</strong> $130,000 - $160,000</p>
+                <a href="mailto:jobs@aiinnovate.com?subject=Application for Operations Manager">Apply Now</a>
+            </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 AI Innovate. All rights reserved.</p>
+        <p>© 2024 AI Innovate. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+        function toggleDetails(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
