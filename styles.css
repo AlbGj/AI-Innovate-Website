@@ -33,14 +33,11 @@ header {
 }
 
 .home-image {
-    height: 120px; /* Increased size of the home image */
+    width: auto; /* Adjust width automatically based on height */
+    height: 150px; /* Increased from 120px for greater visibility */
+    margin-right: 20px; /* Consistent spacing */
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-}
 
 nav ul li {
     padding: 0 15px;
