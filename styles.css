@@ -27,7 +27,7 @@ header {
 
 .logo, .home-image {
     width: auto;
-    height: 60px; /* Adjusted size for visibility */
+    height: 100px; /* Adjusted size for visibility */
     margin-right: 20px;
 }
 
