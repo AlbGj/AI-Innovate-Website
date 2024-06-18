@@ -52,8 +52,8 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .service-image {
-    width: 100px; /* Fixed width for images */
-    height: 80px; /* Fixed height for images */
+    width: 300px; /* Tripled the original width */
+    height: 240px; /* Tripled the original height */
     margin-right: 20px;
 }
 
@@ -84,6 +84,8 @@ footer {
     }
 
     .service-image {
+        width: 100%; /* Adjusts to full width on smaller screens */
+        height: auto; /* Maintains aspect ratio */
         margin-bottom: 10px; /* Adds spacing below image on mobile */
     }
 }
