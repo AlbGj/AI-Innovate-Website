@@ -20,24 +20,6 @@ header {
     text-align: center;
 }
 
-.header-content, .content-container, .service {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo, .home-image {
-    width: auto; /* Maintain aspect ratio */
-    height: 120px; /* Increased size of the home image */
-    margin-right: 20px;
-}
-
-.service-image {
-    width: auto; /* Maintain aspect ratio */
-    height: 70px; /* Adjusted size for service images to maintain consistency */
-    margin-right: 20px;
-}
-
 nav ul {
     list-style-type: none;
     display: flex;
@@ -58,33 +40,34 @@ nav ul li a:hover, nav ul li a.active {
     text-decoration: underline;
 }
 
-.content-container, .service {
+.service {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: start; /* Aligns items to the start of the flex container */
     background-color: #ffffff;
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px; /* Optional rounded corners */
+    border-radius: 8px;
 }
 
-.service {
-    align-items: flex-start; /* Align items at the start of the flex container */
+.service-image {
+    width: 100px; /* Fixed width for images */
+    height: 80px; /* Fixed height for images */
+    margin-right: 20px;
 }
 
-.text-content, .service div {
-    flex: 1; /* Allows text content to fill the remaining space */
+.service-text {
+    flex: 1; /* Takes up remaining space */
 }
 
-h2, h3 {
-    color: #005a87;
-}
-
-ul {
-    padding-left: 20px; /* Indentation for list */
+h1, h2, h3 {
+    color: #005a87; /* Adds consistency in header color */
 }
 
 p {
-    color: #333; /* Text color for descriptions */
-    margin-top: 5px; /* Spacing above paragraphs for better readability */
+    margin-top: 5px; /* Improves readability by adding more space between paragraphs */
+    color: #333; /* Ensures text is readable against light background */
 }
 
 footer {
@@ -95,23 +78,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .header-content, .content-container, .service {
+    .service {
         flex-direction: column; /* Stack elements vertically */
         text-align: center;
     }
 
-    .logo, .home-image, .service-image {
-        margin-right: 0; /* Adjust margin for mobile view */
-        margin-bottom: 10px; /* Adds spacing below images on mobile */
-        width: 100%; /* Full width for better mobile responsiveness */
-        height: auto; /* Adjusts height to maintain aspect ratio */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-    }
-
-    nav ul li {
-        padding: 10px 0;
+    .service-image {
+        margin-bottom: 10px; /* Adds spacing below image on mobile */
     }
 }
