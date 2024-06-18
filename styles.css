@@ -2,7 +2,7 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
 }
 
 body {
@@ -40,34 +40,47 @@ nav ul li a:hover, nav ul li a.active {
     text-decoration: underline;
 }
 
-.service {
+.logo {
+    width: 100px; /* Adjusted for smaller logo */
+    height: auto;
+}
+
+.hero {
     display: flex;
-    align-items: center; /* Centers items vertically */
-    justify-content: start; /* Aligns items to the start of the flex container */
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff; /* Clear background for focus on text */
+    text-align: center; /* Center text for a clean look */
+}
+
+.hero-text h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #005a87;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #003f5c;
+}
+
+.text-content {
     background-color: #ffffff;
     padding: 20px;
-    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 800px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
 
-.service-image {
-    width: 300px; /* Specific to service images */
-    height: 240px; /* Specific to service images */
-    margin-right: 20px;
-}
-
-.service-text {
-    flex: 1; /* Takes up remaining space */
-}
-
-h1, h2, h3 {
-    color: #005a87; /* Adds consistency in header color */
-}
-
 p {
-    margin-top: 5px; /* Improves readability by adding more space between paragraphs */
-    color: #333; /* Ensures text is readable against light background */
+    margin-top: 20px;
 }
 
 footer {
@@ -78,14 +91,20 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .service {
-        flex-direction: column; /* Stack elements vertically */
+    .header-content, .content-container {
+        flex-direction: column;
         text-align: center;
     }
 
-    .service-image {
-        width: 100%; /* Adjusts to full width on smaller screens */
-        height: auto; /* Maintains aspect ratio */
-        margin-bottom: 10px; /* Adds spacing below image on mobile */
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 10px 0;
     }
 }
