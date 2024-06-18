@@ -1,10 +1,9 @@
-/* General Reset and Styles */
+/* Basic resets and typography */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -12,51 +11,56 @@ body {
     line-height: 1.6;
     padding: 20px;
 }
-
 header {
     background-color: #005a87;
     color: #ffffff;
     padding: 10px 20px;
     text-align: center;
 }
-
 nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
 }
-
 nav ul li {
     padding: 0 15px;
 }
-
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
-
 nav ul li a:hover, nav ul li a.active {
     text-decoration: underline;
 }
-
 .logo {
-    width: 100px; /* Adjusted for smaller logo */
+    width: 80px; /* Smaller logo for better fit */
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
-
+/* Hero section with video */
 .hero {
+    position: relative;
     display: flex;
     justify-content: center;
-    padding: 20px;
-    background-color: #ffffff; /* Clear background for focus on text */
-    text-align: center; /* Center text for a clean look */
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
 }
-
-.hero-text h2 {
-    margin-bottom: 20px;
+#heroVideo {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    object-fit: cover; /* Ensure cover fit */
+    z-index: -1; /* Ensures text stays on top */
 }
-
+.hero-text {
+    z-index: 10; /* Above the video */
+    color: #ffffff;
+}
 button {
     padding: 10px 20px;
     background-color: #005a87;
@@ -65,46 +69,38 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
-
 button:hover {
     background-color: #003f5c;
 }
-
-.text-content {
+/* Testimonials */
+.testimonials h3, .news h3 {
+    color: #005a87;
+    margin: 20px 0;
+    text-align: center;
+}
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+}
+.news article {
     background-color: #ffffff;
     padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
+    margin: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px;
 }
-
-p {
-    margin-top: 20px;
-}
-
+/* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
     background-color: #333;
     color: #ffffff;
 }
-
 @media (max-width: 768px) {
-    .header-content, .content-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        margin-bottom: 10px;
-    }
-
-    nav ul {
+    .hero {
         flex-direction: column;
     }
-
-    nav ul li {
-        padding: 10px 0;
+    .hero-text {
+        padding: 20px;
     }
 }
