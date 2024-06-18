@@ -41,7 +41,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .logo {
-    width: 100px; /* Adjusted for smaller logo */
+    width: 100px;
     height: auto;
 }
 
@@ -49,8 +49,8 @@ nav ul li a:hover, nav ul li a.active {
     display: flex;
     justify-content: center;
     padding: 20px;
-    background-color: #ffffff; /* Clear background for focus on text */
-    text-align: center; /* Center text for a clean look */
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .hero-text h2 {
@@ -91,41 +91,39 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .header-content, .content-container {
+    .hero, .text-content {
         flex-direction: column;
         text-align: center;
+        padding: 10px;
     }
 
     .logo {
-        margin-bottom: 10px;
+        width: 80px; /* Smaller logo for mobile */
+        margin-bottom: 20px; /* More space under the logo */
+    }
+
+    .hero-text h2, p {
+        margin-bottom: 15px; /* More spacing for readability */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 10px;
     }
 
     nav ul li {
         padding: 10px 0;
     }
-}
 
-.service {
-    display: flex;
-    align-items: center; /* Centers items vertically */
-    justify-content: start; /* Aligns items to the start of the flex container */
-    background-color: #ffffff;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
+    .service-image {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Auto-adjust height */
+        margin-right: 0; /* No right margin */
+        margin-bottom: 20px; /* Space between image and text */
+    }
 
-.service-image {
-    width: 300px; /* Tripled the original width */
-    height: 240px; /* Tripled the original height */
-    margin-right: 20px;
-}
-
-.service-text {
-    flex: 1; /* Takes up remaining space */
+    .service {
+        flex-direction: column; /* Stack service image and text vertically */
+        align-items: center; /* Center align items */
+    }
 }
