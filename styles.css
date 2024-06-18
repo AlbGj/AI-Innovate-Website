@@ -121,8 +121,8 @@ footer {
 }
 
 .service-image {
-    width: 300px; /* Specific to service images */
-    height: 240px; /* Specific to service images */
+    width: 300px; /* Tripled the original width */
+    height: 240px; /* Tripled the original height */
     margin-right: 20px;
 }
 
