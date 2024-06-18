@@ -108,3 +108,53 @@ footer {
         padding: 10px 0;
     }
 }
+
+.service {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: start; /* Aligns items to the start of the flex container */
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.service-image {
+    width: 300px; /* Tripled the original width */
+    height: 240px; /* Tripled the original height */
+    margin-right: 20px;
+}
+
+.service-text {
+    flex: 1; /* Takes up remaining space */
+}
+
+h1, h2, h3 {
+    color: #005a87; /* Adds consistency in header color */
+}
+
+p {
+    margin-top: 5px; /* Improves readability by adding more space between paragraphs */
+    color: #333; /* Ensures text is readable against light background */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .service {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+
+    .service-image {
+        width: 100%; /* Adjusts to full width on smaller screens */
+        height: auto; /* Maintains aspect ratio */
+        margin-bottom: 10px; /* Adds spacing below image on mobile */
+    }
+}
