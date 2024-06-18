@@ -33,8 +33,8 @@ header {
 }
 
 .service-image {
-    width: 120px; /* Maintain aspect ratio */
-    height: 80px; /* Adjusted size for service images to maintain consistency */
+    width: auto; /* Maintain aspect ratio */
+    height: 60px; /* Adjusted size for service images to maintain consistency */
     margin-right: 20px;
 }
 
