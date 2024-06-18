@@ -34,8 +34,8 @@ header {
 
 .service-image {
     width: auto; /* Maintain aspect ratio */
-    height: 60px; /* Adjusted size for service images to maintain consistency */
-    margin-right: 20px;
+    height: 70px; /* Adjusted size for service images to maintain consistency */
+    margin-right: 30px;
 }
 
 nav ul {
