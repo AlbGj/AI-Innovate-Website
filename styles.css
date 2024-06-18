@@ -111,23 +111,38 @@ footer {
 
 .service {
     display: flex;
-    align-items: center; /* Centers items vertically */
+    align-items: center; /* Ensures vertical centering */
     justify-content: start; /* Aligns items to the start of the flex container */
     background-color: #ffffff;
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
+    overflow: hidden; /* Prevents overflow */
 }
 
 .service-image {
-    width: 300px; /* Tripled the original width */
-    height: 240px; /* Tripled the original height */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 300px; /* Fixed width */
+    height: 240px; /* Fixed height to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
     margin-right: 20px;
 }
 
 .service-text {
-    flex: 1; /* Takes up remaining space */
+    flex: 1; /* Allows the text to fill the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the text content in available space */
+}
+
+h1, h2, h3 {
+    color: #005a87;
+}
+
+p {
+    margin-top: 5px;
+    color: #333;
 }
 
 h1, h2, h3 {
