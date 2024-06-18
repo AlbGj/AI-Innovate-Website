@@ -111,7 +111,7 @@ footer {
 
 .service {
     display: flex;
-    align-items: center; /* Ensures vertical centering */
+    align-items: center; /* Keeps content vertically aligned */
     justify-content: start; /* Aligns items to the start of the flex container */
     background-color: #ffffff;
     padding: 20px;
@@ -121,42 +121,44 @@ footer {
 }
 
 .service-image {
-    width: 200px; /* Adjusted width */
-    height: 150px; /* Adjusted height */
-    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
-    margin-right: 20px;
+    width: 200px; /* Fixed width for the image container */
+    height: 150px; /* Fixed height for the image container */
+    overflow: hidden; /* Hides parts of the image that exceed the container size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-image img {
+    width: auto; /* Adjust width automatically to maintain aspect ratio */
+    height: 100%; /* The image will fill the height of the container */
+    min-width: 100%; /* Ensures the image covers the width of the container */
+    object-fit: cover; /* Covers the area without distorting aspect ratio */
 }
 
 .service-text {
-    flex: 1; /* Allows the text to fill the remaining space */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically centers the text content in available space */
-}
-
-h1, h2, h3 {
-    color: #005a87;
-}
-
-p {
-    margin-top: 5px;
-    color: #333;
+    flex: 1; /* Allows text to fill the remaining space */
+    padding-left: 20px; /* Adds space between the image and the text */
 }
 
 @media (max-width: 768px) {
     .service {
         flex-direction: column; /* Stacks the image and text vertically */
-        text-align: center; /* Centers the text */
-        align-items: center; /* Aligns items centrally in the block */
+        text-align: center;
+        align-items: center; /* Centers items horizontally */
     }
 
     .service-image {
-        width: 80%; /* Takes 80% width of the container */
-        height: auto; /* Adjusts height automatically */
-        margin-bottom: 10px; /* Adds space below the image */
+        width: 80%; /* Adjust width for mobile */
+        height: auto; /* Adjust height automatically for mobile */
+        margin-bottom: 10px; /* Space below image */
+    }
+
+    .service-image img {
+        height: auto; /* Auto-adjust height on mobile */
     }
 
     .service-text {
-        text-align: center; /* Ensures text is centered */
+        padding-left: 0; /* Removes left padding on mobile for better alignment */
     }
 }
