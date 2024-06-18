@@ -111,50 +111,53 @@ footer {
 
 .service {
     display: flex;
-    align-items: center; /* Centers items vertically */
+    align-items: center; /* Ensures vertical centering */
     justify-content: start; /* Aligns items to the start of the flex container */
     background-color: #ffffff;
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
+    overflow: hidden; /* Prevents overflow */
 }
 
 .service-image {
-    width: 300px; /* Tripled the original width */
-    height: 240px; /* Tripled the original height */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 300px; /* Fixed width */
+    height: 240px; /* Fixed height to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
     margin-right: 20px;
 }
 
 .service-text {
-    flex: 1; /* Takes up remaining space */
+    flex: 1; /* Allows the text to fill the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers the text content in available space */
 }
 
 h1, h2, h3 {
-    color: #005a87; /* Adds consistency in header color */
+    color: #005a87;
 }
 
 p {
-    margin-top: 5px; /* Improves readability by adding more space between paragraphs */
-    color: #333; /* Ensures text is readable against light background */
+    margin-top: 5px;
+    color: #333;
 }
-
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #ffffff;
-}
-
 @media (max-width: 768px) {
     .service {
-        flex-direction: column; /* Stack elements vertically */
-        text-align: center;
+        flex-direction: column; /* Stacks the image and text vertically */
+        text-align: center; /* Centers the text */
+        align-items: center; /* Aligns items centrally in the block */
     }
 
     .service-image {
-        width: 100%; /* Adjusts to full width on smaller screens */
-        height: auto; /* Maintains aspect ratio */
-        margin-bottom: 10px; /* Adds spacing below image on mobile */
+        width: 100%; /* Takes full width */
+        height: auto; /* Adjusts height automatically */
+        margin-bottom: 10px; /* Adds space below the image */
+    }
+
+    .service-text {
+        text-align: center; /* Ensures text is centered */
     }
 }
