@@ -45,11 +45,11 @@ nav ul li a:hover, nav ul li a.active {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    background: url('images/background.jpg') no-repeat center center / cover; /* Optional: add a background image */
+    background: url('images/background.jpg') no-repeat center center / cover;
 }
 
 .logo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
 }
 
@@ -78,13 +78,19 @@ button:hover {
     background-color: #003f5c;
 }
 
-.text-content {
+.text-content, .service {
     background-color: #ffffff;
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
+}
+
+.service-image {
+    width: auto;
+    height: 80px;
+    margin-right: 20px;
 }
 
 p {
@@ -110,5 +116,12 @@ footer {
     .hero {
         flex-direction: column;
         text-align: center;
+    }
+
+    .logo, .home-image, .service-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
     }
 }
