@@ -118,13 +118,11 @@ footer {
     margin-top: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
-    overflow: hidden; /* Prevents overflow */
 }
 
 .service-image {
-    flex-shrink: 0; /* Prevents the image from shrinking */
-    width: 300px; /* Fixed width */
-    height: 240px; /* Fixed height to maintain aspect ratio */
+    width: 200px; /* Adjusted width */
+    height: 150px; /* Adjusted height */
     object-fit: cover; /* Ensures the image covers the area without distorting aspect ratio */
     margin-right: 20px;
 }
@@ -144,6 +142,7 @@ p {
     margin-top: 5px;
     color: #333;
 }
+
 @media (max-width: 768px) {
     .service {
         flex-direction: column; /* Stacks the image and text vertically */
@@ -152,7 +151,7 @@ p {
     }
 
     .service-image {
-        width: 100%; /* Takes full width */
+        width: 80%; /* Takes 80% width of the container */
         height: auto; /* Adjusts height automatically */
         margin-bottom: 10px; /* Adds space below the image */
     }
