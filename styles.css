@@ -108,3 +108,24 @@ footer {
         padding: 10px 0;
     }
 }
+
+.service {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: start; /* Aligns items to the start of the flex container */
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.service-image {
+    width: 300px; /* Tripled the original width */
+    height: 240px; /* Tripled the original height */
+    margin-right: 20px;
+}
+
+.service-text {
+    flex: 1; /* Takes up remaining space */
+}
