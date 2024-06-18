@@ -2,7 +2,7 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box;
 }
 
 body {
@@ -20,31 +20,6 @@ header {
     text-align: center;
 }
 
-.header-content, .content-container, .service {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo, .home-image {
-    width: auto; /* Maintain aspect ratio */
-    height: 120px; /* Increased size of the home image */
-    margin-right: 20px;
-}
-
-.service-image {
-    width: auto; /* Maintain aspect ratio */
-    height: 120px; /* Increased height for service images */
-    margin-right: 20px;
-}
-
-/*
-.contact-image {
-    width: 100%; /* Adjusts the image to take full container width */
-    height: auto; /* Maintains aspect ratio */
-    margin: 20px 0; /* Adds top and bottom margin for spacing */
-}*/
-
 nav ul {
     list-style-type: none;
     display: flex;
@@ -61,38 +36,26 @@ nav ul li a {
     font-weight: bold;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav ul li a:hover, nav ul li a.active {
     text-decoration: underline;
 }
 
-.content-container, .service {
+.text-content {
     background-color: #ffffff;
     padding: 20px;
-    margin-top: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Centers and limits content width for readability */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px; /* Optional rounded corners */
+    border-radius: 8px;
 }
 
-.service {
-    align-items: flex-start; /* Align items at the start of the flex container */
-}
-
-.text-content, .service div {
-    flex: 1; /* Allows text content to fill the remaining space */
-}
-
-h2, h3 {
-    color: #005a87;
-}
-
-ul {
-    padding-left: 20px; /* Indentation for list */
+h1, h2 {
+    color: #005a87; /* Adds consistency in header color */
 }
 
 p {
-    color: #333; /* Text color for descriptions */
-    margin-top: 5px; /* Spacing above paragraphs for better readability */
+    margin-top: 20px; /* Improves readability by adding more space between paragraphs */
+    color: #333; /* Ensures text is readable against light background */
 }
 
 footer {
@@ -103,72 +66,16 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .header-content, .content-container, .service {
-        flex-direction: column; /* Stack elements vertically */
-        text-align: center;
-    }
-
-    .logo, .home-image, .service-image {
-        margin-right: 0; /* Adjust margin for mobile view */
-        margin-bottom: 10px; /* Adds spacing below images on mobile */
-        width: 100%; /* Full width for better mobile responsiveness */
-        height: auto; /* Adjusts height to maintain aspect ratio */
-    }
-
     nav ul {
-        flex-direction: column; /* Stack nav items vertically */
+        flex-direction: column;
     }
 
     nav ul li {
         padding: 10px 0;
     }
-}
 
-/* Join Us Page Styles */
-.job-section {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px;
-}
-
-.job-button {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #005a87;
-    color: #ffffff;
-    border: none;
-    text-align: left;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-bottom: 1px solid #cccccc; /* subtle separator */
-}
-
-.job-button:hover, .job-button:focus {
-    background-color: #003f5c;
-}
-
-.job-description {
-    display: none; /* Hide details initially */
-    padding: 10px;
-    background-color: #f9f9f9;
-    line-height: 1.5;
-    font-size: 14px;
-}
-
-.job-description p {
-    margin-bottom: 10px; /* Space between paragraphs */
-}
-
-.job-description strong {
-    color: #005a87; /* Consistent with other headings */
-}
-
-/* Media query adjustments for job buttons and descriptions */
-@media (max-width: 768px) {
-    .job-button {
-        font-size: 14px; /* Smaller font size on smaller screens */
+    .text-content {
+        padding: 20px;
+        margin: 20px;
     }
 }
