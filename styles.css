@@ -40,22 +40,55 @@ nav ul li a:hover, nav ul li a.active {
     text-decoration: underline;
 }
 
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: url('images/background.jpg') no-repeat center center / cover; /* Optional: add a background image */
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+h1, h2 {
+    color: #005a87;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #005a87;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #003f5c;
+}
+
 .text-content {
     background-color: #ffffff;
     padding: 20px;
     margin: 20px auto;
-    max-width: 800px; /* Centers and limits content width for readability */
+    max-width: 800px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
 
-h1, h2 {
-    color: #005a87; /* Adds consistency in header color */
-}
-
 p {
-    margin-top: 20px; /* Improves readability by adding more space between paragraphs */
-    color: #333; /* Ensures text is readable against light background */
+    margin-top: 20px;
 }
 
 footer {
@@ -74,8 +107,8 @@ footer {
         padding: 10px 0;
     }
 
-    .text-content {
-        padding: 20px;
-        margin: 20px;
+    .hero {
+        flex-direction: column;
+        text-align: center;
     }
 }
