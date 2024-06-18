@@ -52,8 +52,8 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .service-image {
-    width: 300px; /* Tripled the original width */
-    height: 240px; /* Tripled the original height */
+    width: 300px; /* Specific to service images */
+    height: 240px; /* Specific to service images */
     margin-right: 20px;
 }
 
